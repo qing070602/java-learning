@@ -46,11 +46,40 @@ git --version
 # 应该输出：git version 2.51.0.windows.1
 ```
 
-> [!warning] IDEA 也要重启
-> IDEA 在启动时读取环境变量。装完 Git 后**必须重启 IDEA**，
-> 否则菜单里的 Git 功能可能是灰的。
-> 重启后到 `File → Settings → Version Control → Git`，
-> 「Path to Git executable」填 `D:\Git\cmd\git.exe` 并点 **Test**，看到版本号就对了。
+### IDEA 已配好 Git 路径（2026-09-18 完成）
+
+在 `%APPDATA%\JetBrains\IntelliJIdea2026.1\options\git.xml` 里已经把 Git 路径钉死：
+
+```json
+{
+    "@version": 4,
+    "pathToGit": "D:/Git/cmd/git.exe",
+    "author": { "name": "qing070602", "email": "3596277589@qq.com" }
+}
+```
+
+**这样就算 IDEA 读到的 PATH 是旧的，也能找到 Git。** 验证方法：
+
+```
+IDEA → File → Settings → Version Control → Git
+「Path to Git executable」应该显示 D:\Git\cmd\git.exe
+点右边 Test → 弹出 "Git executed successfully. Git version is 2.51.0"
+```
+
+> [!warning] ⚠️ 光重启 IDEA 可能不够，原因在这里
+> Windows 上「开始菜单 / 桌面快捷方式」启动的程序，环境变量是从 **explorer.exe（资源管理器）** 继承的，
+> 而 explorer 是在**你开机时**启动的 —— 比你装 Git 早得多。
+> 所以 explorer 手里的 PATH 还是旧的，从它启动的 IDEA 自然也继承旧 PATH。
+>
+> **两种解决方式（选一个）：**
+>
+> | 方式 | 操作 | 彻底程度 |
+> | --- | --- | --- |
+> | **A. 手动指定路径（推荐，一劳永逸）** | 上面那个 git.xml 已经配好了；万一 IDEA 里 Git 还是灰的，就去 Settings 里手动填 `D:\Git\cmd\git.exe` | 只解决 IDEA，但够用 |
+> | **B. 注销并重新登录**（或重启电脑） | 开始菜单 → 头像 → 注销 → 重新登录 | **彻底**，所有程序都能用 `git` 命令 |
+>
+> 建议：**先把 IDEA 的路径手动配上（方式 A）继续干活，等有空了注销重登一次（方式 B）**，
+> 之后在任何地方敲 `git` 都能用。
 
 ---
 

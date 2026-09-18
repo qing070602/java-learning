@@ -38,13 +38,25 @@ public class ArrayMax {
         // ---- 请在下面自己写：求最大值 ----
         // 提示：先假设第一个元素最大，然后从第二个开始逐个比较
 
+        int max = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
         // ---- 请在下面自己写：求最小值 ----
 
+        int min = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
         // ---- 请在下面自己写：求平均值 ----
         // 提示：和 / 数组长度，注意整数除法会丢掉小数
 
-        System.out.println("最大值 = ");
-        System.out.println("最小值 = ");
-        System.out.println("平均值 = ");
+        System.out.println("最大值 = " + max);
+        System.out.println("最小值 = " + min);
+        System.out.println("平均值 = " + (max + min) / arr.length);
     }
 }

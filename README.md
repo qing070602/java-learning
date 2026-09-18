@@ -43,7 +43,7 @@ java-learning/
 ├── java-basics/          黑马 Java 课程练习（按章节）
 │   ├── README.md          章节进度表
 │   ├── 练习代码规范.md     命名 / 注释 / commit 规范
-│   ├── 01-入门语法/        变量、运算符、判断、循环、数组 + PracticeTemplate.java 模板
+│   ├── 01-入门语法/        变量、运算符、判断、循环、数组 + ArrayMax.java 模板
 │   ├── 02-方法/           方法、重载、递归
 │   ├── 03-面向对象/        封装、继承、多态、接口、内部类
 │   ├── 04-集合与泛型/      List / Set / Map / Stream / Lambda

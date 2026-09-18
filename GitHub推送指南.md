@@ -89,7 +89,7 @@ D:\code\java-learning\          ← 这个文件夹 = 你的仓库
 
 | 来源 | 放哪 | 文件命名 |
 | --- | --- | --- |
-| **上课练习题** | `java-basics/对应章节/` | `练习-数组求最值.java`（⚠️ 别用 `Demo1` `Test2`） |
+| **上课练习题** | `java-basics/对应章节/` | `ArrayMax.java`（英文驼峰，**文件名=类名**；别用 `Demo1` `Test2`） |
 | **洛谷** | `algorithm/对应题型/` | `P1001-A+B-Problem-入门.java` |
 | **牛客** | `algorithm/对应题型/` | `HJ1-字符串最后一个单词的长度-简单.java`、`NC68-跳台阶-简单.java` |
 | **LeetCode** | `algorithm/对应题型/` | `0001-两数之和-easy.java` |

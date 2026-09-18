@@ -1,0 +1,71 @@
+# ---- Java 编译产物 ----
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+# ---- 构建输出 ----
+target/
+build/
+out/
+bin/
+dist/
+*.apk
+
+# ---- IDE 配置（含个人本地路径，千万别传） ----
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+*.sublime-workspace
+
+# ---- 操作系统 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 日志与临时文件 ----
+*.log
+logs/
+*.tmp
+*.bak
+*.swp
+*~
+
+# ---- 依赖与虚拟环境 ----
+node_modules/
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+.mypy_cache/
+.pytest_cache/
+
+# ---- 密钥与本地配置（最重要！） ----
+.env
+.env.*
+!.env.example
+application-local.yml
+application-local.properties
+application-secret.yml
+*.pem
+*.key
+*credentials*.json
+*serviceAccount*.json
+
+# ---- 大数据文件（GitHub 单文件限制 100MB） ----
+*.zip
+*.7z
+*.rar
+*.mp4
+*.mov
+*.psd

@@ -123,26 +123,34 @@ cd D:\你的路径\java-learning
 然后依次执行：
 
 ```powershell
-# 1. 初始化本地仓库
-git init
+# 1. 初始化本地仓库（-b main 直接指定分支名）
+git init -b main
 
-# 2. 把默认分支改名为 main（GitHub 的默认叫 main，保持一致）
-git branch -M main
-
-# 3. 把所有文件加入暂存区
+# 2. 把所有文件加入暂存区
 git add .
 
-# 4. 提交一次
+# 3. 提交一次
 git commit -m "init: 仓库初始化，建立目录结构"
 
-# 5. 关联远程仓库（把 你的用户名 换成你的 GitHub 用户名）
-git remote add origin git@github.com:你的用户名/java-learning.git
+# 4. 关联远程仓库
+git remote add origin git@github.com:qing070602/java-learning.git
 
-# 6. 推送
+# 5. 推送
 git push -u origin main
 ```
 
+> [!warning] 如果 push 报 `! [rejected] main -> main (fetch first)`
+> 说明建仓库时勾了「Add a README file」，远程已经有一个提交。
+> 执行这条把远程历史合并进来（冲突时保留本地版本），再 push：
+> ```powershell
+> git pull origin main --allow-unrelated-histories --no-rebase -X ours --no-edit
+> git push -u origin main
+> ```
+
 刷新 GitHub 页面 —— **你的代码上去了**。
+
+> ✅ **本项目已经走完这一步**：仓库 https://github.com/qing070602/java-learning，
+> 本地路径 `D:\code\java-learning`，共 36 个文件。后续直接走第六节的日常三条即可。
 
 ---
 

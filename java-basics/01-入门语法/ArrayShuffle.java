@@ -4,7 +4,7 @@
 //
 //要求:打乱数组中的数据
 import java.util.Random;
-public class ArrayShuffe {
+public class ArrayShuffle {
 
     public static void main(String[] args) {
 

@@ -45,6 +45,14 @@ public class RedPackages {
 //        System.out.println("]");
 
 //        修正版本
+        if (N <= 0) {
+            System.out.println("红包个数必须大于0");
+            return;
+        }
+        if (M < N) {
+            System.out.println("红包总额不能小于红包个数");
+            return;
+        }
         for (int i = 0; i < N - 1; i++) {
 //            之后有多少人领红包
             int remainingPeople = N - i - 1;
@@ -67,5 +75,6 @@ public class RedPackages {
             }
         }
         System.out.println("]");
+
     }
 }

@@ -1,3 +1,5 @@
+package Array;
+
 public class ArrayMergeSorted {
 //    给你两个有序数组 arr1 和 arr2
 //

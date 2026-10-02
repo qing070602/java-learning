@@ -1,3 +1,5 @@
+package Array;
+
 public class ArrayTwoSum {
     public static void main(String[] args) {
 //        给定一个整数数组nums和一个整数目标值target,请你在该数组中找出和为目标值target的

@@ -1,3 +1,5 @@
+package Array;
+
 import java.util.Random;
 
 public class ArrayDistinct {

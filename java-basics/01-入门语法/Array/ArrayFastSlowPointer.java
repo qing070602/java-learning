@@ -1,3 +1,5 @@
+package Array;
+
 public class ArrayFastSlowPointer {
     public static void main(String[] args) {
 //        // 给定义一个递增有序数组,去除其中重复元素
